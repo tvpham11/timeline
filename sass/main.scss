@@ -1,0 +1,13 @@
+$grey: #B7CAD5;
+$blueback: #3A95C9;
+
+
+.post {
+  background-color: $blueback;
+  padding: 28px;
+  color: white;
+
+  h2 {
+    border-bottom: 1px solid white;
+  }
+}

@@ -1,3 +1,13 @@
-<h1>
-  {{value}}
-</h1>
+<h1>Timeline</h1>
+
+<ul>
+{{#each timelines}}
+    <li>
+    <div>{{calendar}}</div>
+    <div>{{clock}}</div>
+    <i class="fa {{icon}}"></i>
+    <div class="post"><h2>{{title}}</h2>
+    <div class="content">{{content}}</div></div>
+    </li>
+{{/each}}
+</ul>
