@@ -1,6 +1,31 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+li {
+  max-width: 615px;
+  list-style: none; }
+
+.timedate {
+  float: left; }
+
+.icon {
+  float: right; }
+  .icon .fa {
+    color: white;
+    font-size: 24px;
+    background-color: #50A6D6;
+    padding: 8px;
+    border-radius: 50%;
+    border: 6px solid #B2DCF6; }
+
 .post {
   background-color: #3A95C9;
   padding: 28px;
   color: white; }
+  .post:hover {
+    cursor: pointer;
+    background-color: #6FC0EC; }
   .post h2 {
-    border-bottom: 1px solid white; }
+    border-bottom: 1px solid #A0D4F0; }
+  .post content {
+    font-weight: lighter; }

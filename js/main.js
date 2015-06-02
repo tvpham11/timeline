@@ -4,8 +4,8 @@ $.getJSON('http://private-44f6d-timeline6.apiary-mock.com/timeline').done(functi
   entries.forEach(function(entry){
     var dateStr = entry.timestamp;
     var m = moment(new Date(dateStr));
-    entry.calendar = m.format('MM/DD/YY');
-    entry.clock = m.format('hh:mm a');
+    entry.calendar = m.format('M/DD/YY');
+    entry.clock = m.format('HH:mm');
   });
   $('.container').html(template.example(data));
 

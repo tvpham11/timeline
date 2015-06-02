@@ -1,13 +1,51 @@
 $grey: #B7CAD5;
 $blueback: #3A95C9;
+$hoverblue: #6FC0EC;
+$lightgrey: #A0D4F0;
+$iconback: #50A6D6;
+$bluecirc: #B2DCF6;
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+li {
+  max-width: 615px;
+  list-style: none;
+}
+
+.timedate {
+  float: left;
+}
+
+.icon {
+  float: right;
+
+  .fa {
+    color: white;
+    font-size: 24px;
+    background-color: $iconback;
+    padding: 8px;
+    border-radius: 50%;
+    border: 6px solid $bluecirc;
+  }
+}
 
 .post {
   background-color: $blueback;
   padding: 28px;
   color: white;
 
+  &:hover {
+    cursor: pointer;
+    background-color: $hoverblue;
+  }
+
   h2 {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  content {
+    font-weight: lighter;
   }
 }

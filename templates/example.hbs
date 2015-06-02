@@ -2,12 +2,14 @@
 
 <ul>
 {{#each timelines}}
-    <li>
-    <div>{{calendar}}</div>
-    <div>{{clock}}</div>
-    <i class="fa {{icon}}"></i>
+  <li>
+    <div class="timedate">
+      <div class="time">{{clock}}</div>
+      <div class="date">{{calendar}}</div>
+    </div>
+    <div class="icon"><i class="fa {{icon}}"></i></div>
     <div class="post"><h2>{{title}}</h2>
     <div class="content">{{content}}</div></div>
-    </li>
+  </li>
 {{/each}}
 </ul>
