@@ -1,51 +1,109 @@
 $grey: #B7CAD5;
 $blueback: #3A95C9;
 $hoverblue: #6FC0EC;
-$lightgrey: #A0D4F0;
+$greyblue: #A0D4F0;
+$dategrey: #AEC6D3;
 $iconback: #50A6D6;
 $bluecirc: #B2DCF6;
+
+@mixin triangle {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-top: -9px;
+  margin-left: 22px;
+  float: left;
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+h1 {
+  color: $blueback;
+}
+
 li {
-  max-width: 615px;
+  width: 70%;
+  min-width: 200px;
   list-style: none;
-}
+  border-radius: 2px;
 
-.timedate {
-  float: left;
-}
-
-.icon {
-  float: right;
-
-  .fa {
-    color: white;
-    font-size: 24px;
-    background-color: $iconback;
-    padding: 8px;
-    border-radius: 50%;
-    border: 6px solid $bluecirc;
+  &:hover .time {
+    cursor: pointer;
+    color: $hoverblue;
   }
+
+  &:hover .triangle {
+    @include triangle();
+    border-bottom: 10px solid $hoverblue;
+  }
+
+  &:hover .post {
+    cursor: pointer;
+    background-color: $hoverblue;
+  }
+}
+
+.postheader {
+  display: block;
+  height: 70px;
+}
+
+  .timedate {
+    float: left;
+  }
+
+  .date {
+    color: $dategrey;
+    font-weight: 400;
+    font-size: 0.95em;
+  }
+
+  .time {
+    color: $blueback;
+    font-size: 1.5em;
+  }
+
+  .icon {
+    float: right;
+
+    .fa {
+      color: white;
+      font-size: 24px;
+      background-color: $iconback;
+      padding: 8px;
+      border: 6px solid $bluecirc;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      border-radius: 50px;
+    }
+  }
+
+.triangle {
+  @include triangle();
+    border-bottom: 10px solid $blueback;
 }
 
 .post {
   background-color: $blueback;
-  padding: 28px;
+  padding: 27px;
   color: white;
-
-  &:hover {
-    cursor: pointer;
-    background-color: $hoverblue;
-  }
+  border-radius: 10px;
+  margin-bottom: 30px;
 
   h2 {
-    border-bottom: 1px solid $lightgrey;
+    border-bottom: 1px solid $greyblue;
+    padding-bottom: 10px;
+    margin: 0;
   }
 
-  content {
-    font-weight: lighter;
+  .content {
+    font-weight: 400;
+    font-size: 0.95em;
+    line-height: 1.3;
+    padding-top: 23px;
   }
 }

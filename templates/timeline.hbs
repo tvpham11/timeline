@@ -1,0 +1,22 @@
+<h1>Timeline</h1>
+
+<ul>
+{{#each timelines}}
+  <li>
+
+    <div class="postheader">
+      <div class="timedate">
+        <div class="date">{{calendar}}</div>
+        <div class="time">{{clock}}</div>
+      </div>
+      <div class="icon"><i class="fa {{icon}}"></i></div>
+    </div>
+    <div class="triangle"></div>
+    <div class="post">
+      <div class="title"><h2>{{title}}</h2>
+      <div class="content">{{content}}</div>
+    </div>
+
+  </li>
+{{/each}}
+</ul>

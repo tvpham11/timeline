@@ -7,6 +7,6 @@ $.getJSON('http://private-44f6d-timeline6.apiary-mock.com/timeline').done(functi
     entry.calendar = m.format('M/DD/YY');
     entry.clock = m.format('HH:mm');
   });
-  $('.container').html(template.example(data));
+  $('.container').html(template.timeline(data));
 
 });
